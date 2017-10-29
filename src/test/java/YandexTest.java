@@ -25,7 +25,8 @@ public class YandexTest extends BaseSteps {
         selectTVSteps.selectLG();
         selectTVSteps.selectSamsung();
         selectTVSteps.clickButtonApply();
-        selectTVSteps.searchString("Samsung UE55MU6100U");
+        selectTVSteps.checkListTV();
+        selectTVSteps.searchString();
         selectTVSteps.clickButtonFind();
         foundTvStepss.compareTV();
 

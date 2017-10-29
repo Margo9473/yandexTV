@@ -40,13 +40,17 @@ public class BasePage {
 
     public void fillField(WebElement element, String value)  {
         try{
-            new WebDriverWait(driver,10).until(ExpectedConditions.visibilityOf(element));
+            waitVisibility(element);
             element.clear();
             element.sendKeys(value);
         } catch (Exception ex) {
             System.out.println(ex);
         }
 
+    }
+
+    public void waitVisibility(WebElement element){
+        new WebDriverWait(driver,10).until(ExpectedConditions.visibilityOf(element));
     }
 
     public void click(WebElement element) {
